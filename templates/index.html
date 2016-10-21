@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主界面</title>
+</head>
+<body>
+    欢迎你，{{ user.name }},<a href="logout.html">注销</a><br>
+    <br>
+    当前所有本小组抽签的项目：<br>
+    {% for foo in draws %}
+        <a href="draw.html?id={{ foo.id }}">{{ foo.title }}</a><br>
+    {% endfor %}
+
+</body>
+</html>

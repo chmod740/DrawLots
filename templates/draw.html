@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抽签详情页</title>
+</head>
+<body>
+    我的序号：<br>
+    {% if draw_result %}
+        <h3>{{ draw_result.result }}</h3>
+    {% else %}
+        当前还没抽序号<br>
+        <a href="get_my_draw.html?id={{ draw_id }}">点击开始抽</a>
+    {% endif %}
+    <br><br><br>
+    全部人的序号：<br>
+    {% for result in draw_results %}
+        <h3>{{ result.user.name }}:{{ result.result }}</h3>
+    {% endfor %}
+</body>
+</html>

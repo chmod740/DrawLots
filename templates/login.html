@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+</head>
+<body>
+    <h1>《操作系统》讨论课抽题系统 v1.0</h1>
+    初始密码为学号<br>
+    <form action="check_login.html" METHOD="post">
+        学号：<input name="username"><br>
+        密码：<input name="password" type="password"><br>
+        <input type="submit" value="登录">
+    </form>
+    {% if msg %}
+        <p>{{ msg }}</p>
+    {% endif %}
+</body>
+</html>
