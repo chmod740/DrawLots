@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from web.views import login, check_login, index, draw, get_my_draw, logout
+from web.views import login, check_login, index, draw, get_my_draw, logout,index_home
 
 urlpatterns = [
     url('^$', index),
@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^draw.html', draw),
     url(r'^get_my_draw.html', get_my_draw),
     url(r'^logout.html', logout),
+    url(r'^index_home.html',index_home ),
 ]

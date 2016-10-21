@@ -90,3 +90,5 @@ def get_my_draw(req):
             return HttpResponseRedirect('draw.html?id=' + str(draw_id))
     except:
         return HttpResponseRedirect('index.html')
+def index_home(req):
+    return render_to_response('index_home.html')
